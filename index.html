@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TITAN ARCHIVES | Discover the truth</title>
+
+    <meta name="description"
+        content="Explora el universo de Attack on Titan, descubre personajes, titanes y secretos de la humanidad.">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+
+        <nav class="navbar navbar-expand-lg navbar-dark">   
+
+            <div class="container">
+
+                <a class="navbar-brand logo" href="#inicio">
+                    TITAN<span>ARCHIVES</span>
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#explorar">Explorar</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#acerca">Acerca de</a>
+                        </li>
+
+                    </ul>
+
+                    <button class="btn btn-acceso ms-lg-4" id="btnAcceso">
+                        <i class="bi bi-person-circle"></i>
+                        Mi perfil
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PORTADA -->
+        <section class="portada" id="inicio">
+
+            <div class="container portada-contenido">
+
+                <span class="subtitulo">
+                    THE WORLD OF ATTACK ON TITAN
+                </span>
+
+                <h1>
+                    TITAN<br>ARCHIVES
+                </h1>
+
+                <p class="frase">
+                    Discover the secrets beyond the walls.
+                </p>
+
+                <p class="descripcion">
+                    Explora los secretos de la humanidad, conoce a sus protagonistas
+                    y descubre la verdad que se esconde detrás de las murallas.
+                </p>
+
+                <a href="#explorar" class="btn btn-explorar">
+                    EXPLORAR ARCHIVOS
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <div class="indicador">
+                <span>SCROLL TO EXPLORE</span>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+
+        </section>
+
+
+        <!-- CUATRO APARTADOS PRINCIPALES -->
+        <section class="seccion-explorar container" id="explorar">
+
+            <div class="titulo-seccion text-center">
+
+                <span class="etiqueta">ACCESS THE DATABASE</span>
+
+                <h2>EXPLORA EL ARCHIVO</h2>
+
+                <p>
+                    Selecciona una categoría para comenzar tu exploración.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4 mt-4">
+
+                <!-- PERSONAJES -->
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <button class="tarjeta-opcion" data-seccion="personajes">
+
+                        <span class="numero">01</span>
+
+                        <i class="bi bi-people-fill icono-tarjeta"></i>
+
+                        <h3>PERSONAJES</h3>
+
+                        <p>Conoce a quienes forman parte de esta historia.</p>
+
+                        <span class="ver-mas">
+                            EXPLORAR <i class="bi bi-arrow-right"></i>
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- TITANES -->
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <button class="tarjeta-opcion" data-seccion="titanes">
+
+                        <span class="numero">02</span>
+
+                        <i class="bi bi-shield-fill icono-tarjeta"></i>
+
+                        <h3>TITANES</h3>
+
+                        <p>Descubre sus tipos, características y secretos.</p>
+
+                        <span class="ver-mas">
+                            EXPLORAR <i class="bi bi-arrow-right"></i>
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- EL MUNDO -->
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <button class="tarjeta-opcion" data-seccion="mundo">
+
+                        <span class="numero">03</span>
+
+                        <i class="bi bi-globe-americas icono-tarjeta"></i>
+
+                        <h3>EL MUNDO</h3>
+
+                        <p>Explora las murallas y las divisiones militares.</p>
+
+                        <span class="ver-mas">
+                            EXPLORAR <i class="bi bi-arrow-right"></i>
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- BIBLIOTECA -->
+<div class="col-12 col-sm-6 col-lg-3">
+
+    <button class="tarjeta-opcion" data-seccion="interactivo">
+
+        <span class="numero">04</span>
+
+        <i class="bi bi-book-half icono-tarjeta"></i>
+
+        <h3>BIBLIOTECA</h3>
+
+        <p>Descubre la historia del mundo a través de sus archivos y relatos.</p>
+
+        <span class="ver-mas">
+            ABRIR ARCHIVOS <i class="bi bi-arrow-right"></i>
+        </span>
+
+    </button>
+
+</div>
+
+        </section>
+
+
+        <!-- CONTENIDO INTERNO -->
+        <section id="contenidoInterno"
+            class="contenido-interno container d-none">
+
+            <button id="btnVolver" class="btn btn-volver">
+                <i class="bi bi-arrow-left"></i>
+                Volver al inicio
+            </button>
+
+            <div id="contenidoSeccion"></div>
+
+        </section>
+
+
+        <!-- ACERCA DEL APLICATIVO -->
+        <section class="acerca" id="acerca">
+
+            <div class="container text-center">
+
+                <span class="etiqueta">CLASSIFIED INFORMATION</span>
+
+                <h2>THE TRUTH IS OUT THERE</h2>
+
+                <p>
+                    Cada archivo guarda una historia. Cada descubrimiento
+                    nos acerca un poco más a la verdad.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <p>
+            TITAN ARCHIVES &copy; 2026 |
+            UNIVERSE OF ATTACK ON TITAN
+        </p>
+
+    </footer>
+    
+<!-- LIBRERÍA BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- LIBRERÍA SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
+<!-- CONEXIÓN SUPABASE -->
+<script src="js/supabase.js"></script>
+
+<!-- JAVASCRIPT PROPIO -->
+<script src="js/main.js"></script>
+<script src="js/juegos.js"></script>
+<script src="js/catalogo.js"></script>
+<script src="js/mundo.js"></script>
+<script src="js/biblioteca.js"></script>
+<script src="js/perfil.js"></script>
+    
+    
+
+</body>
+
+</html>

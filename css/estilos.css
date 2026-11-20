@@ -1,0 +1,4594 @@
+/* ==========================================
+   TITAN ARCHIVES - ESTILOS PRINCIPALES
+========================================== */
+
+/* COLORES */
+:root {
+    --fondo: #E8E5DF;
+    --fondo-secundario: #D8D3CA;
+    --dorado: #A77B45;
+    --rojo: #783C32;
+    --texto: #292A28;
+    --texto-secundario: #625F59;
+    --cristal: rgba(255, 255, 255, 0.24);
+    --borde: rgba(255, 255, 255, 0.55);
+}
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* ==========================================
+   ENCABEZADO Y NAVEGACIÓN
+========================================== */
+
+.encabezado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 25px 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.65),
+        transparent
+    );
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 27px;
+    font-weight: 00;
+    letter-spacing: 2px;
+    color: white !important;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #D6B47E;
+    margin-left: 5px;
+}
+
+.navbar-nav {
+    gap: 8px;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 17px !important;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    border-color: rgba(214, 180, 126, 0.7);
+    background: rgba(255, 255, 255, 0.10);
+}
+
+
+/* BOTÓN MI PERFIL */
+
+.btn-acceso {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(214, 180, 126, 0.8);
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    transition: 0.3s;
+}
+
+.btn-acceso:hover {
+    background: #D6B47E;
+    border-color: #D6B47E;
+    color: #292A28;
+}
+
+
+/* MENÚ MÓVIL */
+
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    border-radius: 4px;
+    box-shadow: none !important;
+}
+
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        margin-top: 18px;
+        padding: 18px;
+        background: rgba(30, 29, 26, 0.96);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+    }
+
+    .navbar-nav {
+        align-items: stretch;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 12px !important;
+    }
+
+    .btn-acceso {
+        margin-top: 12px;
+    }
+}
+
+
+/* ==========================================
+   PORTADA PRINCIPAL
+========================================== */
+
+.portada {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.15)
+        ),
+        linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.45),
+            transparent
+        ),
+        url("../img/general/portada.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.portada-contenido {
+    padding-top: 130px;
+    padding-bottom: 100px;
+    color: white;
+}
+
+.subtitulo,
+.etiqueta {
+    color: #D6B47E;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.portada h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(48px, 8vw, 100px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: 4px;
+    margin: 22px 0;
+    text-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+}
+
+.frase {
+    color: #E5C99D;
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+}
+
+.descripcion {
+    color: #F0EDE8;
+    max-width: 520px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+/* BOTÓN EXPLORAR */
+
+.btn-explorar {
+    margin-top: 22px;
+    padding: 20px 28px;
+    background: var(--rojo);
+    color: white;
+    border: 1px solid var(--rojo);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-explorar:hover {
+    background: transparent;
+    border-color: white;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.btn-explorar i {
+    margin-left: 12px;
+}
+
+
+/* INDICADOR DE DESPLAZAMIENTO */
+
+.indicador {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    color: white;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+
+/* ==========================================
+   SECCIÓN EXPLORAR
+========================================== */
+
+.seccion-explorar {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.titulo-seccion h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(25px, 4vw, 38px);
+    margin: 18px 0;
+    font-weight: 750;
+}
+
+.titulo-seccion p {
+    color: var(--texto-secundario);
+    font-size: 20px;
+}
+
+
+/* ==========================================
+   TARJETAS PRINCIPALES
+========================================== */
+
+.tarjeta-opcion {
+    width: 100%;
+    height: 300px;
+    padding: 45px 25px;
+
+    text-align: left;
+    color: var(--texto);
+    font-family: 'Inter', sans-serif;
+
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(55, 48, 38, 0.08);
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: 0.35s;
+}
+
+.tarjeta-opcion:hover {
+    transform: translateY(-9px);
+    background: rgb(255, 255, 255);
+    border-color: var(--dorado);
+    box-shadow: 0 15px 35px rgba(55, 48, 38, 0.15);
+}
+
+.tarjeta-opcion:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 4px;
+}
+
+.numero {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+
+    color: rgba(167, 123, 69, 0.6);
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+}
+
+.icono-tarjeta {
+    display: block;
+    font-size: 34px;
+    color: var(--dorado);
+    margin-bottom: 25px;
+}
+
+.tarjeta-opcion h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+.tarjeta-opcion p {
+    color: var(--texto-secundario);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.ver-mas {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--rojo);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   CONTENIDO INTERNO
+========================================== */
+
+.contenido-interno {
+    position: relative;
+    z-index: 101;
+    min-height: 400px;
+    padding-top: 150px;
+    padding-bottom: 80px;
+}
+
+.btn-volver {
+    position: relative;
+    z-index: 102;
+    display: inline-block;
+    color: var(--rojo);
+    border: 1px solid var(--rojo);
+    border-radius: 0;
+    margin-bottom: 35px;
+    padding: 10px 18px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.btn-volver:hover {
+    background: var(--rojo);
+    color: white;
+}
+
+/* ==========================================
+   ACERCA DEL APLICATIVO
+========================================== */
+
+.acerca {
+    padding: 90px 20px;
+    background: var(--fondo-secundario);
+}
+
+.acerca h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(24px, 4vw, 38px);
+    margin: 20px 0;
+}
+
+.acerca p {
+    color: var(--texto-secundario);
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   PIE DE PÁGINA
+========================================== */
+
+.pie-pagina {
+    padding: 25px 15px;
+    text-align: center;
+    background: #292A28;
+}
+
+.pie-pagina p {
+    margin: 0;
+    color: #E8E5DF;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   DISEÑO RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .portada {
+        background-position: 60% center;
+    }
+
+    .portada h1 {
+        font-size: 48px;
+    }
+
+    .portada-contenido {
+        padding-top: 140px;
+    }
+
+    .seccion-explorar {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .indicador {
+        display: none;
+    }
+
+}
+
+/* ==========================================
+   TARJETAS INTERNAS - TITAN ARCHIVES
+========================================== */
+
+.tarjeta-interna {
+    position: relative;
+    min-height: 280px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.65),
+        rgba(255, 255, 255, 0.15)
+    );
+
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(167, 123, 69, 0.65);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease,
+                border-color 0.4s ease;
+}
+
+.tarjeta-interna:hover {
+    transform: translateY(-10px);
+    border-color: var(--rojo);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.16);
+}
+
+.tarjeta-interna h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--rojo);
+    margin-bottom: 12px;
+}
+
+.tarjeta-interna p {
+    color: #51483F;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+/* PRUEBA DE DISEÑO */
+.contenido-interno .tarjeta-interna {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border: 2px solid #A77B45 !important;
+    border-radius: 18px !important;
+    backdrop-filter: blur(15px);
+    min-height: 280px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.contenido-interno .tarjeta-interna:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   TARJETAS INTERACTIVAS
+========================================== */
+
+.contenido-interno .tarjeta-interna {
+    position: relative;
+    min-height: 290px;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.65),
+        rgba(255,255,255,0.20)
+    );
+
+    border: 1px solid #B58A50;
+    border-radius: 18px;
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    transition: all 0.35s ease;
+}
+
+.icono-tarjeta {
+    font-size: 55px;
+    margin-bottom: 22px;
+    transition: transform 0.35s ease;
+}
+
+.contenido-interno .tarjeta-interna:hover {
+    transform: translateY(-12px);
+    background: rgba(255,255,255,0.75);
+    border-color: #783C32;
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.contenido-interno .tarjeta-interna:hover .icono-tarjeta {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.contenido-interno .tarjeta-interna h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    color: #783C32;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.contenido-interno .tarjeta-interna p {
+    color: #51483F;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ICONOS DECORATIVOS EN LAS TARJETAS */
+
+.tarjeta-interna:nth-child(1)::before {
+    content: "⚔️";
+}
+
+.tarjeta-interna:nth-child(2)::before {
+    content: "⭐";
+}
+
+.tarjeta-interna:nth-child(3)::before {
+    content: "🔎";
+}
+
+.contenido-interno .tarjeta-interna {
+    min-height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid #B58A50;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+    transition: 0.35s ease;
+}
+
+.contenido-interno .tarjeta-interna::before {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.contenido-interno .tarjeta-interna:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.16);
+    background: rgba(255, 255, 255, 0.65);
+}
+
+/* ==========================================
+   TARJETAS CON IMÁGENES
+========================================== */
+
+.contenido-interno .tarjeta-interna {
+    width: 100%;
+    min-height: 290px;
+    padding: 28px 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    position: relative;
+    overflow: hidden;
+
+    color: white;
+
+    background-color: #292929;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+
+    box-shadow: 0 8px 25px rgba(55, 48, 38, 0.12);
+
+    transition: 0.4s;
+}
+
+/* IMAGEN DE CADA TARJETA */
+
+/* PRIMERA TARJETA */
+.contenido-interno .row > div:nth-child(1) .tarjeta-interna {
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.05)
+        ),
+        url("../img/secciones/explorar - personajes.jpeg") !important;
+}
+
+/* SEGUNDA TARJETA */
+.contenido-interno .row > div:nth-child(2) .tarjeta-interna {
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.05)
+        ),
+        url("../img/secciones/favoritos.jpeg") !important;
+}
+
+/* TERCERA TARJETA */
+.contenido-interno .row > div:nth-child(3) .tarjeta-interna {
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.05)
+        ),
+        url("../img/secciones/reconocimiento.jpeg") !important;
+}
+.contenido-interno .tarjeta-interna {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+
+/* QUITAR EMOJIS ANTERIORES */
+
+.contenido-interno .tarjeta-interna::before {
+    display: none;
+}
+
+/* TEXTOS */
+
+.contenido-interno .tarjeta-interna h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.contenido-interno .tarjeta-interna p {
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.contenido-interno .tarjeta-interna:hover {
+    transform: translateY(-9px);
+    border-color: var(--dorado);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+/* ==========================================
+   CATÁLOGO DE PERSONAJES - TITAN ARCHIVES
+========================================== */
+
+.catalogo-personajes {
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+.texto-catalogo {
+    margin-bottom: 30px;
+    color: var(--texto);
+}
+
+/* CONTROLES */
+
+.controles-catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.controles-catalogo input {
+    flex: 1 1 250px;
+}
+
+.controles-catalogo select {
+    flex: 1 1 200px;
+}
+
+.btn-favoritos,
+.btn-todos {
+    padding: 10px 18px;
+    border: 1px solid var(--dorado);
+    border-radius: 6px;
+    color: var(--texto);
+    background: rgba(255,255,255,0.35);
+    transition: 0.3s;
+}
+
+.btn-favoritos:hover,
+.btn-todos:hover {
+    background: var(--dorado);
+    color: white;
+}
+
+/* CONTADOR */
+
+.contador-catalogo {
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--texto);
+}
+
+/* TARJETAS */
+
+.catalogo-personajes .tarjeta-personaje {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255,255,255,0.35);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(55,48,38,0.10);
+    transition: 0.35s;
+}
+
+.catalogo-personajes .tarjeta-personaje:hover {
+    transform: translateY(-8px);
+    border-color: var(--dorado);
+    box-shadow: 0 15px 30px rgba(55,48,38,0.18);
+}
+
+/* IMÁGENES */
+
+.imagen-personaje {
+    width: 100%;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    background: #292929;
+}
+
+.imagen-personaje img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.5s;
+}
+
+.tarjeta-personaje:hover .imagen-personaje img {
+    transform: scale(1.06);
+}
+
+/* BOTÓN FAVORITOS */
+
+.btn-favorito {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    color: #555;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.btn-favorito.activo {
+    color: #A77B45;
+}
+
+/* INFORMACIÓN */
+
+.datos-personaje {
+    padding: 18px;
+}
+
+.grupo-personaje {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.datos-personaje h3 {
+    margin-bottom: 16px;
+    color: var(--texto);
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* BOTÓN EXPEDIENTE */
+
+.btn-expediente {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--dorado);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--texto);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn-expediente:hover {
+    background: var(--dorado);
+    color: white;
+}
+
+/* MENSAJE SIN RESULTADOS */
+
+.mensaje-vacio {
+    padding: 35px;
+    text-align: center;
+    color: var(--texto);
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 576px) {
+
+    .imagen-personaje {
+        height: 320px;
+    }
+
+    .controles-catalogo {
+        flex-direction: column;
+    }
+
+    .controles-catalogo input,
+    .controles-catalogo select,
+    .controles-catalogo button {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================
+   CORRECCIÓN DEL DISEÑO DE EXPEDIENTES
+========================================== */
+
+.expediente-modal .modal-body {
+    padding: 25px;
+}
+
+.expediente-modal .modal-body .row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0;
+    gap: 20px;
+}
+
+.expediente-modal .modal-body .row > .col-md-5 {
+    flex: 0 0 40%;
+    width: 40%;
+    max-width: 40%;
+    padding: 0;
+}
+
+.expediente-modal .modal-body .row > .col-md-7 {
+    flex: 1;
+    width: 60%;
+    max-width: 60%;
+    padding: 0;
+}
+
+.expediente-modal .imagen-expediente {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 6px;
+}
+
+.expediente-modal #expedienteNombre {
+    color: #292929;
+    font-size: 24px;
+    margin: 12px 0 20px;
+}
+
+.expediente-modal #expedienteGrupo {
+    color: #292929;
+    font-weight: 600;
+}
+
+.expediente-modal .descripcion-expediente {
+    color: #444;
+    line-height: 1.7;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 576px) {
+
+    .expediente-modal .modal-body .row {
+        flex-direction: column;
+    }
+
+    .expediente-modal .modal-body .row > .col-md-5,
+    .expediente-modal .modal-body .row > .col-md-7 {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .expediente-modal .imagen-expediente {
+        height: 280px;
+    }
+
+}
+/* ==========================================
+   TITAN ARCHIVES - ENCABEZADO DEL CATÁLOGO
+========================================== */
+
+.catalogo-personajes {
+    width: 100%;
+    padding: 15px 0 50px;
+    animation: aparecerCatalogo 0.6s ease;
+}
+
+@keyframes aparecerCatalogo {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TÍTULO */
+
+.catalogo-personajes .titulo-interno {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(27px, 4vw, 38px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #29251f;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.catalogo-personajes .titulo-interno::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 3px;
+    margin-top: 13px;
+    background: #A77B45;
+}
+
+/* DESCRIPCIÓN */
+
+.texto-catalogo {
+    color: #706b63;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    margin-bottom: 30px;
+}
+
+/* CONTROLES */
+
+.controles-catalogo {
+    display: grid;
+    grid-template-columns: 1.5fr 1.35fr auto auto;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* BUSCADOR Y SELECTOR */
+
+.controles-catalogo .form-control,
+.controles-catalogo .form-select {
+    height: 49px;
+    border: 1px solid #d5cec3;
+    border-radius: 7px;
+    background-color: #f8f6f2;
+    color: #29251f;
+    font-size: 14px;
+    padding: 0 16px;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.controles-catalogo .form-control:focus,
+.controles-catalogo .form-select:focus {
+    border-color: #A77B45;
+    box-shadow: 0 0 0 3px rgba(167, 123, 69, 0.13);
+}
+
+/* BOTONES */
+
+.controles-catalogo .btn {
+    height: 49px;
+    padding: 0 19px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+/* FAVORITOS */
+
+.btn-favoritos {
+    background: #A77B45;
+    color: #fff;
+    border: 1px solid #A77B45;
+}
+
+.btn-favoritos:hover {
+    background: #876036;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 70, 35, 0.2);
+}
+
+/* VER TODOS */
+
+.btn-todos {
+    background: transparent;
+    color: #514638;
+    border: 1px solid #A77B45;
+}
+
+.btn-todos:hover {
+    background: #29251f;
+    color: #fff;
+    border-color: #29251f;
+}
+
+/* CONTADOR */
+
+.contador-catalogo {
+    color: #81796e;
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    border-bottom: 1px solid #d8d1c7;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+/* BOTÓN VOLVER */
+
+.btn-volver {
+    border: 1px solid #A77B45;
+    color: #783C32;
+    background: transparent;
+    padding: 11px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background: #783C32;
+    color: white;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 900px) {
+    .controles-catalogo {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .controles-catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .controles-catalogo .btn {
+        width: 100%;
+    }
+
+    .catalogo-personajes .titulo-interno {
+        font-size: 25px;
+    }
+}
+/* ==========================================
+   TITAN ARCHIVES - MEJORA DE TARJETAS
+========================================== */
+
+.tarjeta-personaje {
+    background: #F5F2EC;
+    border: 1px solid rgba(167, 123, 69, 0.25);
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(30, 25, 18, 0.08);
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+}
+
+.tarjeta-personaje:hover {
+    transform: translateY(-7px);
+    border-color: #A77B45;
+    box-shadow: 0 12px 25px rgba(30, 25, 18, 0.16);
+}
+
+/* IMÁGENES */
+
+.tarjeta-personaje .imagen-personaje {
+    overflow: hidden;
+    position: relative;
+}
+
+.tarjeta-personaje .imagen-personaje img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.55s ease;
+}
+
+.tarjeta-personaje:hover .imagen-personaje img {
+    transform: scale(1.06);
+}
+
+/* INFORMACIÓN */
+
+.tarjeta-personaje .datos-personaje {
+    padding: 16px 15px;
+}
+
+.tarjeta-personaje .grupo-personaje {
+    color: #A77B45;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.tarjeta-personaje .datos-personaje h3 {
+    color: #29251F;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 8px 0 13px;
+}
+
+/* BOTÓN EXPEDIENTE */
+
+.tarjeta-personaje .btn-expediente {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #B18A58;
+    border-radius: 5px;
+    color: #514638;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-personaje .btn-expediente:hover {
+    background: #3a0303;
+    border-color: #4e041a;
+    color: #fdfcfa;
+}
+
+/* BOTÓN FAVORITOS */
+
+.tarjeta-personaje .btn-favorito {
+    transition: transform 0.3s ease,
+                background 0.3s ease;
+}
+
+.tarjeta-personaje .btn-favorito:hover {
+    transform: scale(1.12);
+}
+
+/* ACCESIBILIDAD: REDUCIR MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+    .tarjeta-personaje,
+    .tarjeta-personaje img,
+    .tarjeta-personaje button {
+        transition: none;
+    }
+}
+/* ==========================================
+   TITAN ARCHIVES - EXPEDIENTES CINEMATOGRÁFICOS
+========================================== */
+
+#modalExpediente .modal-dialog {
+    max-width: 900px;
+}
+
+.expediente-modal {
+    background: #171713 !important;
+    color: #eee4d1 !important;
+    border: 1px solid #A77B45 !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.65);
+}
+
+/* ENCABEZADO */
+
+.expediente-modal .modal-header {
+    background: linear-gradient(90deg, #171713, #30251a);
+    border-bottom: 1px solid #A77B45;
+    padding: 22px 28px;
+}
+
+.expediente-modal .modal-title {
+    color: #E4BD7B;
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.expediente-modal .btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+/* CUERPO */
+
+.expediente-modal .modal-body {
+    padding: 30px;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(167, 123, 69, 0.12),
+            transparent 45%
+        ),
+        #171713;
+}
+
+.expediente-modal .modal-body .row {
+    align-items: center;
+    gap: 25px;
+}
+
+/* FOTOGRAFÍA */
+
+.expediente-modal .imagen-expediente {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid #A77B45;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+/* INFORMACIÓN */
+
+.expediente-modal .etiqueta-expediente {
+    color: #C49A5A;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.expediente-modal #expedienteNombre {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    color: #F0D5A5;
+    margin: 12px 0 22px;
+}
+
+.expediente-modal .titulo-dato {
+    color: #C49A5A;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.expediente-modal #expedienteGrupo {
+    color: #eee4d1;
+    font-size: 15px;
+}
+
+.expediente-modal hr {
+    border-color: #A77B45;
+    opacity: 0.6;
+    margin: 20px 0;
+}
+
+.expediente-modal .descripcion-expediente {
+    color: #D4CBB9;
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* PIE DEL EXPEDIENTE */
+
+.expediente-modal .modal-footer {
+    background: #211d17;
+    border-top: 1px solid rgba(167, 123, 69, 0.5);
+    padding: 17px 25px;
+}
+
+.expediente-modal .btn-cerrar-expediente {
+    background: #A77B45;
+    color: #fff;
+    border: 1px solid #C49A5A;
+    border-radius: 5px;
+    padding: 11px 22px;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.expediente-modal .btn-cerrar-expediente:hover {
+    background: #D0A35E;
+    color: #171713;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   TARJETAS PRINCIPALES - PERSONAJES
+========================================== */
+
+.contenido-interno .tarjeta-interna {
+    min-height: 330px;
+    border: 1px solid #A77B45;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.13);
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.contenido-interno .tarjeta-interna:hover {
+    transform: translateY(-9px);
+    border-color: #D6AC6A;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* TÍTULOS */
+
+.contenido-interno .tarjeta-interna h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: #F1D6A5;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* DESCRIPCIONES */
+
+.contenido-interno .tarjeta-interna p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.7;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+
+    #modalExpediente .modal-dialog {
+        margin: 12px;
+    }
+
+    .expediente-modal .modal-body {
+        padding: 20px;
+    }
+
+    .expediente-modal .modal-body .row {
+        flex-wrap: wrap !important;
+    }
+
+    .expediente-modal .modal-body .row > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .expediente-modal .imagen-expediente {
+        height: 280px;
+    }
+
+    .expediente-modal #expedienteNombre {
+        font-size: 24px;
+    }
+
+    .contenido-interno .tarjeta-interna {
+        min-height: 290px;
+    }
+}
+/* ==========================================
+   TITAN ARCHIVES - TARJETAS DE PERSONAJES
+   DISEÑO CINEMATOGRÁFICO
+========================================== */
+
+/* CONTENEDOR DE LAS TARJETAS */
+
+#contenidoInterno #contenidoSeccion {
+    padding-top: 15px;
+    padding-bottom: 45px;
+}
+
+/* TARJETAS */
+
+.contenido-interno .tarjeta-interna {
+    position: relative;
+    isolation: isolate;
+    min-height: 390px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    overflow: hidden;
+    border: 1px solid rgba(167, 123, 69, 0.75);
+    border-radius: 17px;
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+/* DEGRADADO SOBRE LAS FOTOGRAFÍAS */
+
+.contenido-interno .tarjeta-interna::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+        to top,
+        rgba(12, 12, 10, 0.96) 0%,
+        rgba(12, 12, 10, 0.65) 35%,
+        rgba(12, 12, 10, 0.08) 100%
+    );
+
+    transition: background 0.4s ease;
+}
+
+/* LÍNEA DORADA DECORATIVA */
+
+.contenido-interno .tarjeta-interna::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #D6AC6A,
+        #F0D5A5,
+        #D6AC6A,
+        transparent
+    );
+
+    opacity: 0.8;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.contenido-interno .tarjeta-interna:hover {
+    transform: translateY(-12px) scale(1.015);
+
+    border-color: #E0B76E;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.25),
+        0 0 18px rgba(167, 123, 69, 0.18);
+}
+
+/* TÍTULOS */
+
+.contenido-interno .tarjeta-interna h3 {
+    position: relative;
+    z-index: 1;
+
+    color: #F3D9AA;
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+}
+
+/* DESCRIPCIONES */
+
+.contenido-interno .tarjeta-interna p {
+    position: relative;
+    z-index: 1;
+
+    color: #F1EDE5;
+    font-size: 15px;
+    line-height: 1.8;
+
+    max-width: 95%;
+    margin-bottom: 0;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* ANIMACIÓN SUAVE */
+
+.contenido-interno .tarjeta-interna:hover::before {
+    background: linear-gradient(
+        to top,
+        rgba(12, 12, 10, 0.98) 0%,
+        rgba(12, 12, 10, 0.55) 50%,
+        rgba(12, 12, 10, 0.03) 100%
+    );
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+
+    .contenido-interno .tarjeta-interna {
+        min-height: 340px;
+        padding: 25px;
+    }
+
+}
+
+/* CELULARES */
+
+@media (max-width: 576px) {
+
+    .contenido-interno .tarjeta-interna {
+        min-height: 300px;
+        padding: 22px;
+    }
+
+    .contenido-interno .tarjeta-interna h3 {
+        font-size: 21px;
+    }
+
+    .contenido-interno .tarjeta-interna p {
+        font-size: 14px;
+    }
+
+}
+/* ==========================================
+   MEJORA TIPOGRÁFICA DE LAS TARJETAS
+========================================== */
+
+/* ELIMINAR LA LÍNEA DECORATIVA */
+.contenido-interno .tarjeta-interna::after {
+    display: none !important;
+}
+
+/* TÍTULOS */
+.contenido-interno .tarjeta-interna h3 {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    color: #F5D9A6;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+    margin-bottom: 14px;
+}
+
+/* DESCRIPCIONES */
+.contenido-interno .tarjeta-interna p {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 1.8;
+    color: #FFFFFF;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* DEGRADADO MÁS SUAVE */
+.contenido-interno .tarjeta-interna::before {
+    background: linear-gradient(
+        to top,
+        rgba(12, 12, 10, 0.78) 0%,
+        rgba(12, 12, 10, 0.35) 45%,
+        rgba(12, 12, 10, 0.02) 100%
+    );
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.contenido-interno .tarjeta-interna:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+}
+/* =====================================
+   IDENTIDAD TIPOGRÁFICA TITAN ARCHIVES
+===================================== */
+
+/* TÍTULO PRINCIPAL */
+#contenidoSeccion h2 {
+    font-family: 'Cinzel', serif !important;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #0c0601;
+    margin-bottom: 12px;
+}
+
+/* TÍTULOS DE LAS TARJETAS */
+.contenido-interno .tarjeta-interna h3 {
+    font-family: 'Cinzel', serif !important;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.35;
+    color: #F2D29A;
+    text-transform: uppercase;
+    text-shadow: 0 3px 12px rgba(185, 37, 37, 0.8);
+}
+
+/* DESCRIPCIONES */
+.contenido-interno .tarjeta-interna p {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: .3px;
+    color: #FFFFFF;
+}
+
+/* TÍTULO DE LA SECCIÓN */
+.contenido-interno h1,
+.contenido-interno .titulo-interno {
+    font-family: 'Cinzel', serif !important;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #470707;
+}
+
+/* QUITAR LÍNEAS DECORATIVAS */
+.contenido-interno .tarjeta-interna::after {
+    display: none !important;
+}
+
+/* ============================================
+   TITAN ARCHIVES - JUEGO DE RECONOCIMIENTO
+============================================ */
+
+.juego-reconocimiento {
+    width: 100%;
+    padding: 45px 25px;
+    margin: 35px auto;
+    background: linear-gradient(145deg, #171b1d, #252421);
+    border: 1px solid rgba(190, 151, 91, 0.35);
+    border-radius: 8px;
+    color: #eee8dc;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ENCABEZADO */
+
+.juego-encabezado {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.juego-etiqueta {
+    display: inline-block;
+    color: #c29b62;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.juego-encabezado h2,
+.resultado-final h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #e4c28c;
+    margin-bottom: 20px;
+}
+
+.juego-encabezado p {
+    color: #c5c0b6;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* TARJETAS DE NIVELES */
+
+.niveles-juego {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.nivel-tarjeta {
+    min-height: 300px;
+    padding: 35px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: linear-gradient(160deg, #292a27, #1b1d1c);
+    border: 1px solid rgba(190, 151, 91, 0.3);
+    border-radius: 6px;
+
+    transition: 0.3s ease;
+}
+
+.nivel-tarjeta:hover {
+    transform: translateY(-9px);
+    border-color: #c29b62;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.nivel-tarjeta > i {
+    font-size: 42px;
+    color: #c29b62;
+    margin-bottom: 22px;
+}
+
+.nivel-tarjeta h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #e4c28c;
+    margin-bottom: 15px;
+}
+
+.nivel-tarjeta p {
+    color: #c5c0b6;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 65px;
+}
+
+.nivel-tarjeta span {
+    color: #a9a39a;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin: 10px 0 20px;
+}
+
+/* BOTONES */
+
+.btn-nivel,
+.btn-siguiente {
+    padding: 13px 25px;
+    background: #a77b45;
+    border: 1px solid #c29b62;
+    color: #171714;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-nivel:hover,
+.btn-siguiente:hover {
+    background: #d4b17a;
+    transform: translateY(-2px);
+}
+
+/* PROGRESO DEL JUEGO */
+
+.juego-progreso {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #d4b17a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.barra-progreso {
+    width: 100%;
+    height: 6px;
+    background: #3a3934;
+    margin-bottom: 45px;
+    overflow: hidden;
+}
+
+.barra-progreso > div {
+    height: 100%;
+    background: #c29b62;
+    transition: width 0.4s ease;
+}
+
+/* PREGUNTAS */
+
+.pregunta-contenido {
+    max-width: 800px;
+    margin: auto;
+}
+
+.pregunta-contenido h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(21px, 3vw, 30px);
+    line-height: 1.6;
+    color: #eee2ca;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.opciones-pregunta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.opcion-respuesta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 75px;
+    padding: 18px;
+    text-align: left;
+
+    background: #292a27;
+    border: 1px solid #514b40;
+    color: #e8e1d5;
+
+    font-size: 13px;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.opcion-respuesta:hover:not(:disabled) {
+    background: #38352e;
+    border-color: #c29b62;
+    transform: translateY(-3px);
+}
+
+.opcion-respuesta > span {
+    min-width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+
+    background: #a77b45;
+    color: #171714;
+    font-weight: 800;
+}
+
+.opcion-respuesta:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+/* RESPUESTAS */
+
+.opcion-respuesta.respuesta-correcta {
+    border-color: #5caa7a;
+    background: rgba(50, 120, 75, 0.2);
+}
+
+.opcion-respuesta.respuesta-incorrecta {
+    border-color: #bd6258;
+    background: rgba(150, 55, 45, 0.2);
+}
+
+.mensaje-correcto,
+.mensaje-incorrecto {
+    margin-top: 25px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.mensaje-correcto {
+    color: #80c99a;
+}
+
+.mensaje-incorrecto {
+    color: #df8b80;
+}
+
+.btn-siguiente {
+    display: block;
+    margin: 30px auto 0;
+}
+
+/* RESULTADOS */
+
+.resultado-final {
+    text-align: center;
+    max-width: 750px;
+    margin: 35px auto;
+}
+
+.icono-trofeo {
+    display: block;
+    font-size: 65px;
+    color: #d4b17a;
+    margin: 20px 0;
+}
+
+.puntuacion-final {
+    font-family: 'Cinzel', serif;
+    font-size: 85px;
+    font-weight: 700;
+    color: #d4b17a;
+    margin: 20px 0;
+}
+
+.puntuacion-final span {
+    font-size: 35px;
+    color: #aaa49a;
+}
+
+.resultado-final h3 {
+    color: #eee2ca;
+    font-size: 15px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.resultado-final p {
+    color: #c5c0b6;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 22px;
+    background: transparent;
+    border: 1px solid #a77b45;
+    color: #d4b17a;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.btn-volver:hover {
+    background: #a77b45;
+    color: #171714;
+}
+
+/* ADAPTACIÓN A TABLET Y MÓVIL */
+
+@media (max-width: 768px) {
+
+    .niveles-juego {
+        grid-template-columns: 1fr;
+    }
+
+    .nivel-tarjeta {
+        min-height: 260px;
+    }
+
+    .opciones-pregunta {
+        grid-template-columns: 1fr;
+    }
+
+    .juego-reconocimiento {
+        padding: 30px 18px;
+    }
+
+    .juego-progreso {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .puntuacion-final {
+        font-size: 65px;
+    }
+
+}
+/* ============================================
+   RECONOCIMIENTO - DISEÑO OSCURO
+   SOLO AFECTA AL JUEGO
+============================================ */
+
+/* PANEL PRINCIPAL */
+
+.juego-reconocimiento {
+    background: linear-gradient(
+        145deg,
+        #121416,
+        #0b0d10
+    ) !important;
+
+    border: 1px solid #39332a;
+    border-radius: 5px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ENCABEZADO */
+
+.juego-reconocimiento .juego-encabezado h2,
+.juego-reconocimiento .resultado-final h2 {
+    color: #b18a55 !important;
+    text-shadow: none;
+}
+
+.juego-reconocimiento .juego-etiqueta {
+    color: #947345;
+}
+
+.juego-reconocimiento .juego-encabezado p {
+    color: #aaa49a;
+}
+
+/* TARJETAS DE NIVELES */
+
+.juego-reconocimiento .nivel-tarjeta {
+    background: #191a1b;
+    border: 1px solid #39342c;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.juego-reconocimiento .nivel-tarjeta:hover {
+    background: #202122;
+    border-color: #987747;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.juego-reconocimiento .nivel-tarjeta > i {
+    color: #a9844e;
+}
+
+.juego-reconocimiento .nivel-tarjeta h3 {
+    color: #c0a274;
+}
+
+.juego-reconocimiento .nivel-tarjeta p {
+    color: #aaa49a;
+}
+
+.juego-reconocimiento .nivel-tarjeta span {
+    color: #817b72;
+}
+
+/* BOTONES */
+
+.juego-reconocimiento .btn-nivel,
+.juego-reconocimiento .btn-siguiente {
+    background: #8c693d;
+    border: 1px solid #a17c4a;
+    color: #100f0d;
+}
+
+.juego-reconocimiento .btn-nivel:hover,
+.juego-reconocimiento .btn-siguiente:hover {
+    background: #a17c4a;
+    color: #08090c;
+}
+
+/* PREGUNTAS */
+
+.juego-reconocimiento .pregunta-contenido h2 {
+    color: #c0a274;
+}
+
+.juego-reconocimiento .juego-progreso {
+    color: #a9844e;
+}
+
+.juego-reconocimiento .barra-progreso {
+    background: #292725;
+}
+
+.juego-reconocimiento .barra-progreso > div {
+    background: #987747;
+}
+
+/* OPCIONES DE RESPUESTA */
+
+.juego-reconocimiento .opcion-respuesta {
+    background: #191a1b;
+    border: 1px solid #39342c;
+    color: #d0c9bd;
+}
+
+.juego-reconocimiento .opcion-respuesta:hover:not(:disabled) {
+    background: #222323;
+    border-color: #987747;
+}
+
+.juego-reconocimiento .opcion-respuesta > span {
+    background: #725532;
+    color: #e0d0b5;
+}
+
+/* RESULTADOS */
+
+.juego-reconocimiento .puntuacion-final {
+    color: #b18a55;
+}
+
+.juego-reconocimiento .icono-trofeo {
+    color: #987747;
+}
+
+.juego-reconocimiento .resultado-final h3 {
+    color: #b8aa95;
+}
+
+.juego-reconocimiento .resultado-final p {
+    color: #aaa49a;
+}
+
+/* BOTÓN VOLVER DENTRO DEL JUEGO */
+
+.juego-reconocimiento .btn-volver {
+    background: transparent;
+    border: 1px solid #725532;
+    color: #b18a55;
+}
+
+.juego-reconocimiento .btn-volver:hover {
+    background: #725532;
+    color: #111;
+}
+
+/* RESPUESTAS */
+
+.juego-reconocimiento .respuesta-correcta {
+    border-color: #55745b;
+}
+
+.juego-reconocimiento .respuesta-incorrecta {
+    border-color: #754343;
+}
+/* ==========================================
+   TITAN ARCHIVES - RECONOCIMIENTO
+   NUEVA APARIENCIA
+========================================== */
+
+/* FONDO EXTERIOR: SOLO CUANDO SE ABRE EL JUEGO */
+
+body:has(.juego-reconocimiento) {
+    background:
+        radial-gradient(ellipse at center, #26332c 0%, #111914 65%, #090d0b 100%) !important;
+    transition: background 0.4s ease;
+}
+
+body:has(.juego-reconocimiento) .contenido-interno {
+    background: transparent !important;
+}
+
+/* PANEL PRINCIPAL */
+
+.juego-reconocimiento {
+    background: linear-gradient(145deg, #1b241f, #101713) !important;
+    border: 1px solid #435447;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    color: #e8e5dc;
+}
+
+/* ENCABEZADO */
+
+.juego-reconocimiento .juego-encabezado h2,
+.juego-reconocimiento .resultado-final h2 {
+    color: #e1dfd3 !important;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+}
+
+.juego-reconocimiento .juego-etiqueta {
+    color: #b9a477;
+}
+
+.juego-reconocimiento .juego-encabezado p {
+    color: #c0c6bd;
+}
+
+/* TARJETAS */
+
+.juego-reconocimiento .nivel-tarjeta {
+    min-height: 320px;
+    background: #19211c;
+    border: 1px solid #465247;
+    border-radius: 7px;
+    transition: 0.3s ease;
+}
+
+.juego-reconocimiento .nivel-tarjeta:hover {
+    transform: translateY(-7px);
+}
+
+/* RECLUTA - VERDE */
+
+.juego-reconocimiento .nivel-tarjeta:nth-child(1) {
+    border-top: 3px solid #557b5b;
+}
+
+.juego-reconocimiento .nivel-tarjeta:nth-child(1) > i {
+    color: #80a986;
+}
+
+.juego-reconocimiento .nivel-tarjeta:nth-child(1) h3 {
+    color: #a9c6a8;
+}
+
+/* SOLDADO - DORADO */
+
+.juego-reconocimiento .nivel-tarjeta:nth-child(2) {
+    border-top: 3px solid #a1844f;
+}
+
+.juego-reconocimiento .nivel-tarjeta:nth-child(2) > i {
+    color: #c1a36c;
+}
+
+.juego-reconocimiento .nivel-tarjeta:nth-child(2) h3 {
+    color: #d0b985;
+}
+
+/* EXPERTO - ROJO */
+
+.juego-reconocimiento .nivel-tarjeta:nth-child(3) {
+    border-top: 3px solid #914747;
+}
+
+.juego-reconocimiento .nivel-tarjeta:nth-child(3) > i {
+    color: #bd7770;
+}
+
+.juego-reconocimiento .nivel-tarjeta:nth-child(3) h3 {
+    color: #d18c83;
+}
+
+.juego-reconocimiento .nivel-tarjeta p {
+    color: #c0c4bd;
+}
+
+.juego-reconocimiento .nivel-tarjeta span {
+    color: #a5a69e;
+}
+
+/* BOTONES */
+
+.juego-reconocimiento .btn-nivel {
+    background: #405e46;
+    border: 1px solid #66836b;
+    color: #f0f0e8;
+    transition: 0.3s ease;
+}
+
+.juego-reconocimiento .nivel-tarjeta:nth-child(2) .btn-nivel {
+    background: #80683e;
+    border-color: #a58b59;
+}
+
+.juego-reconocimiento .nivel-tarjeta:nth-child(3) .btn-nivel {
+    background: #773b3b;
+    border-color: #a45b55;
+}
+
+.juego-reconocimiento .btn-nivel:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+/* PREGUNTAS */
+
+.juego-reconocimiento .pregunta-contenido h2 {
+    color: #e2dfd3;
+}
+
+.juego-reconocimiento .juego-progreso {
+    color: #c1a36c;
+}
+
+.juego-reconocimiento .barra-progreso {
+    background: #303a32;
+}
+
+.juego-reconocimiento .barra-progreso > div {
+    background: #829b76;
+}
+
+/* OPCIONES */
+
+.juego-reconocimiento .opcion-respuesta {
+    background: #202a23;
+    border: 1px solid #465247;
+    color: #e2e3da;
+}
+
+.juego-reconocimiento .opcion-respuesta:hover:not(:disabled) {
+    background: #2b3a2f;
+    border-color: #829b76;
+}
+
+.juego-reconocimiento .opcion-respuesta > span {
+    background: #526e55;
+    color: #f2f1e9;
+}
+
+/* RESULTADOS */
+
+.juego-reconocimiento .puntuacion-final {
+    color: #c6aa76;
+}
+
+.juego-reconocimiento .icono-trofeo {
+    color: #c6aa76;
+}
+
+.juego-reconocimiento .resultado-final h3 {
+    color: #d2c9b4;
+}
+
+.juego-reconocimiento .resultado-final p {
+    color: #c0c6bd;
+}
+
+/* RESPUESTAS */
+
+.juego-reconocimiento .respuesta-correcta {
+    border-color: #6e9b72;
+    background: rgba(70, 120, 75, 0.2);
+}
+
+.juego-reconocimiento .respuesta-incorrecta {
+    border-color: #a45b55;
+    background: rgba(130, 50, 50, 0.2);
+}
+
+/* MÓVILES */
+
+@media (max-width: 768px) {
+    .juego-reconocimiento {
+        padding: 28px 16px;
+    }
+
+    .juego-reconocimiento .nivel-tarjeta {
+        min-height: 280px;
+    }
+}
+/* =====================================
+   RECONOCIMIENTO - COLOR DE PREGUNTAS
+===================================== */
+
+/* TEXTO DE LAS PREGUNTAS */
+.juego-reconocimiento .pregunta-contenido h2 {
+    color: #E8DFCE !important;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* OPCIONES DE RESPUESTA */
+.juego-reconocimiento .opcion-respuesta {
+    color: #F0EDE5 !important;
+    font-size: 16px;
+}
+
+/* LETRAS A, B, C Y D */
+.juego-reconocimiento .opcion-respuesta span {
+    color: #D0AA70 !important;
+    font-weight: 700;
+}
+
+/* TEXTO DE PROGRESO */
+.juego-reconocimiento .juego-progreso {
+    color: #D0AA70 !important;
+}
+
+/* ============================================
+   TITAN ARCHIVES - SECCIÓN TITANES
+============================================ */
+
+.archivo-titanes {
+    padding: 45px 30px 65px;
+    background: #1c9e6a;
+    border: 1px solid rgba(190, 145, 75, 0.3);
+    border-radius: 8px;
+    color: #eee9df;
+    margin-top: 35px;
+}
+
+/* ENCABEZADO */
+
+.encabezado-titanes {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.etiqueta-titanes {
+    color: #bd965c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.encabezado-titanes h2 {
+    color: #d0aa70;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 43px);
+    font-weight: 700;
+    margin: 18px 0;
+}
+
+.encabezado-titanes p {
+    color: #c1c2b9;
+    line-height: 1.8;
+}
+
+.linea-titanes {
+    width: 90px;
+    height: 2px;
+    background: #bd965c;
+    margin: 25px auto;
+}
+
+/* TARJETAS */
+
+.tarjeta-titan {
+    height: 100%;
+    background: #920202;
+    border: 1px solid rgba(189, 150, 92, 0.25);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.tarjeta-titan:hover {
+    transform: translateY(-7px);
+    border-color: #bd965c;
+    box-shadow: 0 12px 30px rgba(150, 38, 38, 0.35);
+}
+
+/* IMÁGENES */
+
+.imagen-titan {
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+    background: #111512;
+}
+
+.imagen-titan img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-titan:hover .imagen-titan img {
+    transform: scale(1.06);
+}
+
+.imagen-no-disponible {
+    display: none;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    color: #bd965c;
+    font-size: 12px;
+}
+
+.imagen-no-disponible i {
+    font-size: 35px;
+}
+
+.numero-titan {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(12, 17, 14, 0.9);
+    color: #d0aa70;
+    padding: 8px 12px;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* INFORMACIÓN */
+
+.informacion-titan {
+    padding: 23px;
+}
+
+.categoria-titan {
+    color: #bd965c;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.informacion-titan h3 {
+    color: #eee6d7;
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.informacion-titan p {
+    color: #b9bdb6;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 66px;
+}
+
+/* BOTÓN EXPEDIENTE */
+
+.btn-expediente-titan {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background: transparent;
+    border: 1px solid #a98450;
+    color: #d0aa70;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.btn-expediente-titan:hover {
+    background: #a98450;
+    color: #111512;
+}
+
+/* ARCHIVO ESPECIAL */
+
+.archivo-ymir {
+    margin-top: 45px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid rgba(189, 150, 92, 0.35);
+    background: #171d19;
+}
+
+.archivo-ymir span {
+    color: #bd965c;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.archivo-ymir p {
+    color: #d1cec5;
+    margin: 12px 0 0;
+}
+
+/* MODAL */
+
+.fondo-modal-titan {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.contenido-modal-titan {
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    background: #151b18;
+    border: 1px solid #a98450;
+    border-radius: 7px;
+}
+
+.modal-imagen-titan {
+    min-height: 450px;
+}
+
+.modal-imagen-titan img {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    object-fit: cover;
+}
+
+.modal-informacion-titan {
+    padding: 40px 30px;
+}
+
+.modal-informacion-titan h2 {
+    color: #d0aa70;
+    font-family: 'Cinzel', serif;
+    font-size: 27px;
+    margin-top: 18px;
+}
+
+.modal-informacion-titan h3 {
+    color: #bd965c;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.modal-informacion-titan p {
+    color: #dedbd2;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.cerrar-modal-titan {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    background: #a98450;
+    border: none;
+    color: #111512;
+    border-radius: 50%;
+}
+
+.estado-expediente {
+    display: inline-block;
+    margin-top: 25px;
+    color: #9ebc9d;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* BOTÓN DE ENTRADA */
+
+.portada-titanes {
+    margin-top: 35px;
+    padding: 65px 25px;
+    text-align: center;
+    background: #101513;
+    border: 1px solid rgba(189, 150, 92, 0.3);
+    border-radius: 7px;
+}
+
+.portada-titanes h2 {
+    color: #d0aa70;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 20px 0;
+}
+
+.portada-titanes p {
+    color: #c1c2b9;
+    margin-bottom: 28px;
+}
+
+.btn-archivo-titanes {
+    padding: 14px 25px;
+    background: #a98450;
+    border: 1px solid #bd965c;
+    color: #111512;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-archivo-titanes:hover {
+    background: #d0aa70;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+
+    .archivo-titanes {
+        padding: 30px 15px;
+    }
+
+    .contenido-modal-titan {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-imagen-titan,
+    .modal-imagen-titan img {
+        min-height: 260px;
+        max-height: 300px;
+    }
+
+    .modal-informacion-titan {
+        padding: 25px 20px;
+    }
+
+}
+/* ============================================
+   TITAN ARCHIVES - SECCIÓN TITANES
+============================================ */
+
+.archivo-titanes {
+    padding: 45px 30px 65px;
+    background: #101513;
+    border: 1px solid rgba(190, 145, 75, 0.3);
+    border-radius: 8px;
+    color: #eee9df;
+    margin-top: 35px;
+}
+
+/* ENCABEZADO */
+
+.encabezado-titanes {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.etiqueta-titanes {
+    color: #bd965c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.encabezado-titanes h2 {
+    color: #d0aa70;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 43px);
+    font-weight: 700;
+    margin: 18px 0;
+}
+
+.encabezado-titanes p {
+    color: #c1c2b9;
+    line-height: 1.8;
+}
+
+.linea-titanes {
+    width: 90px;
+    height: 2px;
+    background: #bd965c;
+    margin: 25px auto;
+}
+
+/* TARJETAS */
+
+.tarjeta-titan {
+    height: 100%;
+    background: #191f1c;
+    border: 1px solid rgba(189, 150, 92, 0.25);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.tarjeta-titan:hover {
+    transform: translateY(-7px);
+    border-color: #bd965c;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* IMÁGENES */
+
+.imagen-titan {
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+    background: #111512;
+}
+
+.imagen-titan img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-titan:hover .imagen-titan img {
+    transform: scale(1.06);
+}
+
+.imagen-no-disponible {
+    display: none;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    color: #bd965c;
+    font-size: 12px;
+}
+
+.imagen-no-disponible i {
+    font-size: 35px;
+}
+
+.numero-titan {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(12, 17, 14, 0.9);
+    color: #d0aa70;
+    padding: 8px 12px;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* INFORMACIÓN */
+
+.informacion-titan {
+    padding: 23px;
+}
+
+.categoria-titan {
+    color: #bd965c;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.informacion-titan h3 {
+    color: #eee6d7;
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.informacion-titan p {
+    color: #b9bdb6;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 66px;
+}
+
+/* BOTÓN EXPEDIENTE */
+
+.btn-expediente-titan {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background: transparent;
+    border: 1px solid #a98450;
+    color: #d0aa70;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.btn-expediente-titan:hover {
+    background: #a98450;
+    color: #111512;
+}
+
+/* ARCHIVO ESPECIAL */
+
+.archivo-ymir {
+    margin-top: 45px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid rgba(189, 150, 92, 0.35);
+    background: #171d19;
+}
+
+.archivo-ymir span {
+    color: #bd965c;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.archivo-ymir p {
+    color: #d1cec5;
+    margin: 12px 0 0;
+}
+
+/* MODAL */
+
+.fondo-modal-titan {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.contenido-modal-titan {
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    background: #151b18;
+    border: 1px solid #a98450;
+    border-radius: 7px;
+}
+
+.modal-imagen-titan {
+    min-height: 450px;
+}
+
+.modal-imagen-titan img {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    object-fit: cover;
+}
+
+.modal-informacion-titan {
+    padding: 40px 30px;
+}
+
+.modal-informacion-titan h2 {
+    color: #d0aa70;
+    font-family: 'Cinzel', serif;
+    font-size: 27px;
+    margin-top: 18px;
+}
+
+.modal-informacion-titan h3 {
+    color: #bd965c;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.modal-informacion-titan p {
+    color: #dedbd2;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.cerrar-modal-titan {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    background: #a98450;
+    border: none;
+    color: #111512;
+    border-radius: 50%;
+}
+
+.estado-expediente {
+    display: inline-block;
+    margin-top: 25px;
+    color: #9ebc9d;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* BOTÓN DE ENTRADA */
+
+.portada-titanes {
+    margin-top: 35px;
+    padding: 65px 25px;
+    text-align: center;
+    background: #101513;
+    border: 1px solid rgba(189, 150, 92, 0.3);
+    border-radius: 7px;
+}
+
+.portada-titanes h2 {
+    color: #d0aa70;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 20px 0;
+}
+
+.portada-titanes p {
+    color: #c1c2b9;
+    margin-bottom: 28px;
+}
+
+.btn-archivo-titanes {
+    padding: 14px 25px;
+    background: #a98450;
+    border: 1px solid #bd965c;
+    color: #111512;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-archivo-titanes:hover {
+    background: #d0aa70;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+
+    .archivo-titanes {
+        padding: 30px 15px;
+    }
+
+    .contenido-modal-titan {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-imagen-titan,
+    .modal-imagen-titan img {
+        min-height: 260px;
+        max-height: 300px;
+    }
+
+    .modal-informacion-titan {
+        padding: 25px 20px;
+    }
+
+}
+/* ============================================
+   TITAN ARCHIVES - NUEVA IDENTIDAD DE TITANES
+   DORADO - VERDE - ROJO - BEIGE
+============================================ */
+
+.archivo-titanes {
+    background: #B89555;
+    padding: 110px 110px;
+    border: 1px solid #D6BD8D;
+    border-radius: 5px;
+    color: #29251F;
+}
+
+/* ENCABEZADO */
+
+.encabezado-titanes h2 {
+    color: #263C32;
+    font-family: 'Cinzel', serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.encabezado-titanes p {
+    color: #29251F;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+}
+
+.etiqueta-titanes {
+    color: #783C38;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.linea-titanes {
+    background: #783C38;
+}
+
+/* TARJETAS */
+
+.tarjeta-titan {
+    background: #263C32;
+    border: 1px solid #D6BD8D;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.tarjeta-titan:hover {
+    transform: translateY(-8px);
+    border-color: #783C38;
+    box-shadow: 0 12px 25px rgba(41, 37, 31, 0.3);
+}
+
+.imagen-titan {
+    height: 280px;
+    background: #29251F;
+}
+
+.numero-titan {
+    background: #783C38;
+    color: #F0E5D0;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* INFORMACIÓN */
+
+.informacion-titan {
+    padding: 25px;
+}
+
+.categoria-titan {
+    color: #D6BD8D;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+}
+
+.informacion-titan h3 {
+    color: #E8DCC3;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.informacion-titan p {
+    color: #E8DCC3;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+/* BOTONES */
+
+.btn-expediente-titan {
+    background: #783C38;
+    color: #F0E5D0;
+    border: 1px solid #D6BD8D;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.btn-expediente-titan:hover {
+    background: #B89555;
+    color: #263C32;
+    border-color: #263C32;
+}
+
+/* ARCHIVO ESPECIAL DE YMIR */
+
+.archivo-ymir {
+    background: #783C38;
+    border: 2px solid #D6BD8D;
+}
+
+.archivo-ymir span {
+    color: #E8DCC3;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+.archivo-ymir p {
+    color: #F0E5D0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+}
+
+/* PORTADA */
+
+.portada-titanes {
+    background: #B89555;
+    border: 2px solid #D6BD8D;
+}
+
+.portada-titanes h2 {
+    color: #263C32;
+    font-family: 'Cinzel', serif;
+    font-weight: 800;
+}
+
+.portada-titanes p {
+    color: #29251F;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+}
+
+.btn-archivo-titanes {
+    background: #783C38;
+    color: #F0E5D0;
+    border: 1px solid #D6BD8D;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-archivo-titanes:hover {
+    background: #263C32;
+    color: #E8DCC3;
+}
+
+/* MODAL DE EXPEDIENTES */
+
+.contenido-modal-titan {
+    background: #E8DCC3;
+    border: 2px solid #B89555;
+}
+
+.modal-informacion-titan h2 {
+    color: #263C32;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+.modal-informacion-titan h3 {
+    color: #783C38;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.modal-informacion-titan p {
+    color: #29251F;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+}
+
+.cerrar-modal-titan {
+    background: #783C38;
+    color: #F0E5D0;
+}
+
+.estado-expediente {
+    color: #263C32;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+/* ==========================================
+   FONDO DORADO EN TODA LA SECCIÓN TITANES
+========================================== */
+
+/* Fondo general de la página */
+body:has(.archivo-titanes) {
+    background: #B89555;
+}
+
+/* Contenedor principal de los titanes */
+#contenidoInterno:has(.archivo-titanes) {
+    background: #B89555;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 40px 5%;
+}
+
+/* Panel dorado */
+.archivo-titanes {
+    background: transparent;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+}
+
+/* Evitar espacios beige alrededor del contenido */
+main {
+    background: transparent;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+    #contenidoInterno:has(.archivo-titanes) {
+        padding: 25px 12px;
+    }
+}
+/* ==========================================
+   TITANES - TARJETAS MÁS GRANDES
+========================================== */
+
+/* Aprovechar el ancho de la pantalla */
+#contenidoInterno:has(.archivo-titanes) {
+    width: 100%;
+    max-width: 100%;
+    padding: 35px 2%;
+    margin: 0;
+}
+
+/* Ampliar el panel de los titanes */
+.archivo-titanes {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 50px 35px;
+}
+
+/* Separación entre tarjetas */
+.archivo-titanes .row {
+    --bs-gutter-x: 22px;
+    --bs-gutter-y: 22px;
+}
+
+/* Hacer las tarjetas más grandes */
+.tarjeta-titan {
+    width: 100%;
+    min-height: 380px;
+}
+
+/* Aumentar el tamaño de las imágenes */
+.imagen-titan {
+    height: 320px;
+}
+
+/* Mejorar el espacio del contenido */
+.informacion-titan {
+    padding: 25px;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .archivo-titanes {
+        padding: 30px 12px;
+    }
+
+    .imagen-titan {
+        height: 240px;
+    }
+}
+/* ==========================================
+   BOTÓN VOLVER AL INICIO
+========================================== */
+
+#btnVolver {
+    background: #783C38;
+    color: #F0E5D0;
+    border: 1px solid #D6BD8D;
+
+    padding: 12px 22px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+#btnVolver:hover {
+    background: #263C32;
+    color: #F0E5D0;
+    border-color: #D6BD8D;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+/* ==========================================
+   PORTADA PRINCIPAL DE LOS TITANES
+========================================== */
+
+/* Fondo dorado en toda la pantalla */
+body:has(.portada-titanes) {
+    background: #B89555;
+    min-height: 100vh;
+}
+
+/* Ampliar el contenedor de la portada */
+body:has(.portada-titanes) .container:has(#contenidoInterno) {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Espacio de la sección */
+#contenidoInterno:has(.portada-titanes) {
+    width: 100%;
+    max-width: 100%;
+    min-height: calc(100vh - 180px);
+    padding: 45px 4%;
+    margin: 0;
+    background: #B89555;
+}
+
+/* Recuadro principal */
+.portada-titanes {
+    width: 100%;
+    max-width: 1600px;
+    min-height: 420px;
+    margin: 0 auto;
+    padding: 85px 40px;
+
+    background: #B89555;
+    border: 2px solid #D6BD8D;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Título */
+.portada-titanes h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    color: #263C32;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+/* Descripción */
+.portada-titanes p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    color: #29251F;
+    max-width: 850px;
+}
+
+/* Botón explorar */
+.btn-archivo-titanes {
+    padding: 15px 30px;
+    font-size: 14px;
+    margin-top: 15px;
+    background: #783C38;
+    color: #F0E5D0;
+    border: 1px solid #D6BD8D;
+    transition: 0.3s ease;
+}
+
+.btn-archivo-titanes:hover {
+    background: #263C32;
+    color: #F0E5D0;
+    transform: translateY(-3px);
+}
+
+/* Etiqueta superior */
+.etiqueta-titanes {
+    color: #783C38;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 768px) {
+    #contenidoInterno:has(.portada-titanes) {
+        padding: 25px 12px;
+    }
+
+    .portada-titanes {
+        min-height: 350px;
+        padding: 45px 20px;
+    }
+
+    .portada-titanes p {
+        font-size: 19px;
+    }
+}
+/* ==========================================
+   PORTADA TITANES - INFORMACIÓN CENTRADA
+========================================== */
+
+.portada-titanes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 80px 30px;
+}
+
+/* Etiqueta superior */
+.portada-titanes .etiqueta-titanes {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #783C38;
+    margin-bottom: 18px;
+}
+
+/* Título principal */
+.portada-titanes h2 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    color: #263C32;
+    margin: 0 0 22px;
+}
+
+/* Descripción */
+.portada-titanes p {
+    max-width: 850px;
+    margin: 0 auto 25px;
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    line-height: 1.6;
+    color: #29251F;
+}
+
+/* Botón */
+.portada-titanes .btn-archivo-titanes {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 10px auto 0;
+    padding: 16px 32px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 768px) {
+    .portada-titanes {
+        padding: 55px 20px;
+    }
+
+    .portada-titanes h2 {
+        font-size: 30px;
+    }
+
+    .portada-titanes p {
+        font-size: 20px;
+    }
+}
+/* ==========================================
+   PORTADA TITANES - DISEÑO COMPACTO
+========================================== */
+
+.portada-titanes {
+    width: 100%;
+    max-width: 1600px;
+    min-height: 0;
+
+    padding: 55px 30px 60px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    background: #B89555;
+    border: 2px solid #D6BD8D;
+    border-radius: 6px;
+}
+
+/* Etiqueta */
+.portada-titanes .etiqueta-titanes {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #783C38;
+
+    margin-bottom: 12px;
+}
+
+/* Título */
+.portada-titanes h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(32px, 3.5vw, 46px);
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.2;
+
+    color: #263C32;
+    margin: 0 0 15px;
+}
+
+/* Descripción */
+.portada-titanes p {
+    max-width: 780px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.4;
+
+    color: #29251F;
+    margin: 0 auto 20px;
+}
+
+/* Botón */
+.portada-titanes .btn-archivo-titanes {
+    margin: 0;
+    padding: 13px 27px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    background: #783C38;
+    color: #F0E5D0;
+    border: 1px solid #D6BD8D;
+
+    transition: 0.3s ease;
+}
+
+.portada-titanes .btn-archivo-titanes:hover {
+    background: #263C32;
+    color: #F0E5D0;
+    transform: translateY(-2px);
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .portada-titanes {
+        padding: 40px 18px;
+    }
+
+    .portada-titanes h2 {
+        font-size: 29px;
+    }
+
+    .portada-titanes p {
+        font-size: 19px;
+    }
+}
+/* ==========================================
+   AJUSTE ÚNICAMENTE DE ALINEACIÓN
+========================================== */
+
+/* Centrar toda la información */
+.portada-titanes {
+    text-align: center;
+}
+
+.portada-titanes .etiqueta-titanes,
+.portada-titanes h2,
+.portada-titanes p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Centrar el botón */
+.portada-titanes .btn-archivo-titanes {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Línea decorativa debajo del contenido */
+.portada-titanes h2::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 2px;
+    background: #783C38;
+    margin: 15px auto 0;
+}
+
+/* Línea negra en la parte inferior */
+footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Distribución vertical de la página */
+body:has(.portada-titanes) {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body:has(.portada-titanes) main {
+    flex: 1;
+}
+/* INFORMACIÓN EN LA PARTE INFERIOR DEL RECUADRO */
+
+.portada-titanes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    min-height: 420px;
+    padding: 30px 30px 45px;
+
+    text-align: center;
+}
+
+/* Mantener todos los textos centrados */
+.portada-titanes .etiqueta-titanes,
+.portada-titanes h2,
+.portada-titanes p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botón centrado */
+.portada-titanes .btn-archivo-titanes {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Línea decorativa debajo del título */
+.portada-titanes h2::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 2px;
+    background: #783C38;
+    margin: 15px auto 0;
+}
+/* ==========================================
+   CENTRAR TODO EL CONTENIDO DE LA PORTADA
+========================================== */
+
+body:has(.portada-titanes) {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Área principal */
+body:has(.portada-titanes) main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centrar el botón y el recuadro */
+#contenidoInterno:has(.portada-titanes) {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    padding: 35px 4%;
+}
+
+/* Botón volver */
+#btnVolver {
+    margin: 0 auto;
+}
+
+/* Recuadro centrado */
+.portada-titanes {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* ==========================================
+   AJUSTE DEL TAMAÑO Y POSICIÓN DE LA PORTADA
+========================================== */
+
+/* Mantener el cuadro en el centro de la página */
+#contenidoInterno:has(.portada-titanes) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 22px;
+    width: 100%;
+    padding: 35px 4%;
+}
+
+/* Hacer el cuadro más grande sin moverlo del centro */
+.portada-titanes {
+    width: 90%;
+    max-width: 1450px;
+    min-height: 460px;
+    margin: 0 auto;
+}
+
+/* Botón volver a la esquina superior izquierda */
+#btnVolver {
+    align-self: flex-start;
+    margin: 0;
+}
+/* ==========================================
+   EL MUNDO - DISEÑO DE TARJETAS
+========================================== */
+
+.portada-mundo {
+    background: #B89555;
+    padding: 45px 25px;
+    margin-bottom: 35px;
+    text-align: center;
+    border: 1px solid #D6BD8D;
+}
+
+.etiqueta-mundo {
+    color: #783C38;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.portada-mundo h2 {
+    color: #263C32;
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.portada-mundo p {
+    color: #29251F;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    max-width: 750px;
+    margin: auto;
+}
+
+.contenedor-mundo {
+    padding: 15px 2%;
+}
+
+.tarjeta-mundo {
+    height: 100%;
+    background: #263C32;
+    border: 1px solid #D6BD8D;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.tarjeta-mundo:hover {
+    transform: translateY(-7px);
+    border-color: #783C38;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.tarjeta-mundo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.informacion-mundo {
+    padding: 24px;
+}
+
+.informacion-mundo span {
+    color: #D6BD8D;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.informacion-mundo h3 {
+    color: #E8DCC3;
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin: 13px 0;
+}
+
+.informacion-mundo p {
+    color: #F0E5D0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.5;
+    min-height: 58px;
+}
+
+.informacion-mundo button {
+    background: #783C38;
+    color: #F0E5D0;
+    border: 1px solid #D6BD8D;
+    padding: 12px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.informacion-mundo button:hover {
+    background: #B89555;
+    color: #263C32;
+}
+
+@media (max-width: 768px) {
+    .portada-mundo h2 {
+        font-size: 27px;
+    }
+
+    .tarjeta-mundo img {
+        height: 220px;
+    }
+}
+/* ==========================================
+   TITAN ARCHIVES - EXPEDIENTES DEL MUNDO
+========================================== */
+
+.expediente-mundo {
+    width: 100%;
+    padding: 30px;
+    background: #B89555;
+    border: 1px solid #D6BD8D;
+}
+
+.volver-mundo {
+    background: #783C38;
+    color: #F0E5D0;
+    border: 1px solid #D6BD8D;
+    padding: 12px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.volver-mundo:hover {
+    background: #263C32;
+    transform: translateY(-3px);
+}
+
+.encabezado-expediente-mundo {
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.encabezado-expediente-mundo span {
+    color: #783C38;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.encabezado-expediente-mundo h2 {
+    color: #263C32;
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+.contenido-expediente-mundo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    background: #263C32;
+    padding: 30px;
+    border: 1px solid #D6BD8D;
+}
+
+.imagen-expediente-mundo img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    border: 2px solid #D6BD8D;
+}
+
+.texto-expediente-mundo h3 {
+    color: #D6BD8D;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.texto-expediente-mundo p,
+.texto-expediente-mundo li {
+    color: #F0E5D0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.texto-expediente-mundo ul {
+    padding-left: 22px;
+}
+
+.texto-expediente-mundo li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .contenido-expediente-mundo {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .imagen-expediente-mundo img {
+        height: 260px;
+    }
+
+    .encabezado-expediente-mundo h2 {
+        font-size: 27px;
+    }
+
+    .expediente-mundo {
+        padding: 15px;
+    }
+}
+/* ==========================================
+   TITAN ARCHIVES - BIBLIOTECA
+========================================== */
+
+.portada-biblioteca {
+    width: 100%;
+    min-height: 600px;
+    padding: 50px 4%;
+    background: #B89555;
+    border: 1px solid #D6BD8D;
+}
+
+/* ENCABEZADO */
+
+.encabezado-biblioteca {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 55px;
+}
+
+.subtitulo-biblioteca {
+    color: #783C38;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.encabezado-biblioteca h2 {
+    color: #263C32;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 18px 0;
+}
+
+.linea-biblioteca {
+    width: 130px;
+    height: 2px;
+    background: #783C38;
+    margin: 20px auto;
+}
+
+.encabezado-biblioteca p {
+    color: #263C32;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    line-height: 1.7;
+}
+
+/* COLECCIÓN */
+
+.coleccion-libros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* LIBROS */
+
+.libro-temporada {
+    min-height: 350px;
+    padding: 30px 20px;
+    background: #263C32;
+    border: 2px solid #D6BD8D;
+    outline: 1px solid #783C38;
+    outline-offset: -9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.libro-temporada:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+    background: #314C3F;
+}
+
+.libro-temporada > span {
+    color: #D6BD8D;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.libro-temporada > i {
+    color: #D6BD8D;
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+.libro-temporada h3 {
+    color: #F0E5D0;
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    line-height: 1.5;
+    min-height: 75px;
+}
+
+.libro-temporada p {
+    color: #D6BD8D;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* BOTÓN */
+
+.btn-abrir-libro {
+    background: #783C38;
+    color: #F0E5D0;
+    border: 1px solid #D6BD8D;
+    padding: 11px 22px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-abrir-libro:hover {
+    background: #B89555;
+    color: #263C32;
+    transform: scale(1.05);
+}
+
+/* ADAPTACIÓN A PANTALLAS */
+
+@media (max-width: 1000px) {
+    .coleccion-libros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .coleccion-libros {
+        grid-template-columns: 1fr;
+    }
+
+    .portada-biblioteca {
+        padding: 35px 5%;
+    }
+}
+/* ==========================================
+   VISOR DE LIBROS - VENTANA INDEPENDIENTE
+========================================== */
+
+.visor-biblioteca {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    background: rgba(15, 20, 16, 0.96);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.libro-abierto {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    min-height: 550px;
+    background: #B89555;
+    border: 3px solid #D6BD8D;
+    padding: 55px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+.pagina-libro {
+    min-height: 400px;
+    padding: 35px;
+    background: #F0E5D0;
+    border: 1px solid #D6BD8D;
+    color: #263C32;
+}
+
+.etiqueta-libro {
+    display: block;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 4px;
+    color: #783C38;
+}
+
+.pagina-libro h2 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    margin: 30px 0;
+}
+
+.linea-pagina {
+    width: 100px;
+    height: 2px;
+    background: #783C38;
+    margin: 20px auto;
+}
+
+.pagina-libro p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.numero-pagina {
+    display: block;
+    text-align: right;
+    margin-top: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.controles-libro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+.controles-libro button,
+.cerrar-libro {
+    background: #783C38;
+    color: #F0E5D0;
+    border: 1px solid #D6BD8D;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.cerrar-libro {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+@media(max-width: 600px) {
+    .libro-abierto {
+        padding: 45px 15px 20px;
+    }
+
+    .pagina-libro {
+        padding: 20px;
+    }
+
+    .controles-libro {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* =====================================
+   BIBLIOTECA - ESTILO VINOTINTO
+===================================== */
+
+:root {
+    --vino-principal: #4A1025;
+    --vino-oscuro: #2B0916;
+    --vino-secundario: #641B35;
+    --dorado: #D6AD60;
+    --texto-libro: #F5EAF0;
+}
+
+/* Fondo del lector */
+.visor-biblioteca {
+    background: rgba(15, 3, 9, 0.95);
+}
+
+/* Libro abierto */
+.libro-abierto {
+    background: linear-gradient(
+        135deg,
+        var(--vino-principal),
+        var(--vino-oscuro)
+    );
+    border: 1px solid var(--dorado);
+    border-radius: 14px;
+    color: var(--texto-libro);
+}
+
+/* Botones de navegación */
+.controles-libro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-top: 1px solid rgba(214, 173, 96, 0.35);
+}
+
+.controles-libro button {
+    background: var(--vino-secundario);
+    color: var(--texto-libro);
+    border: 1px solid var(--dorado);
+    border-radius: 8px;
+    padding: 11px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.controles-libro button:hover:not(:disabled) {
+    background: var(--dorado);
+    color: var(--vino-oscuro);
+    transform: translateY(-3px);
+}
+
+.controles-libro button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+#progresoLibro {
+    color: var(--dorado);
+    font-weight: bold;
+}
+
+/* Botón cerrar */
+.cerrar-libro {
+    background: var(--vino-secundario);
+    color: var(--dorado);
+    border: 1px solid var(--dorado);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.cerrar-libro:hover {
+    background: var(--dorado);
+    color: var(--vino-oscuro);
+}
+/* ============================================
+   MI PERFIL - BEYOND THE WALLS
+============================================ */
+
+.seccion-perfil {
+    color: #fff;
+}
+
+.tarjeta-perfil {
+    max-width: 550px;
+    padding: 35px;
+    background: #151b2b;
+    border: 1px solid #713044;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.avatar-perfil {
+    font-size: 75px;
+    color: #a83d57;
+    margin-bottom: 10px;
+}
+
+.tarjeta-perfil label {
+    color: #ddd;
+    margin-bottom: 8px;
+}
+
+.btn-guardar-perfil {
+    background: #782d43;
+    color: white;
+    border: none;
+}
+
+.btn-guardar-perfil:hover {
+    background: #963b55;
+    color: white;
+}
+
+.estadisticas-perfil {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+}
+
+.dato-perfil i {
+    color: #c45a73;
+    font-size: 28px;
+}
+
+.dato-perfil h4 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+/* ============================================
+   MI PERFIL - BEYOND THE WALLS
+============================================ */
+
+.tarjeta-perfil {
+    max-width: 600px;
+    padding: 35px;
+    background: #151b2b;
+    border: 1px solid #713044;
+    border-radius: 18px;
+    color: white;
+    box-shadow: 0 10px 35px rgba(0,0,0,.3);
+}
+
+.avatar-perfil {
+    font-size: 75px;
+    color: #a83d57;
+    margin-bottom: 15px;
+}
+
+.bienvenida-perfil {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 25px;
+    background: #292033;
+    border-left: 4px solid #a83d57;
+    color: white;
+    border-radius: 8px;
+}
+
+.btn-guardar-perfil {
+    background: #782d43;
+    color: white;
+    border: none;
+    padding: 12px;
+}
+
+.btn-guardar-perfil:hover {
+    background: #963b55;
+    color: white;
+}
+
+.estadisticas-perfil {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+}
+
+.dato-perfil i {
+    font-size: 28px;
+    color: #c45a73;
+}
+
+.dato-perfil h4 {
+    margin-top: 10px;
+    color: white;
+}
+
+.opcion-perfil {
+    background: #151b2b;
+    color: white;
+    border: 1px solid #713044;
+    border-radius: 12px;
+    padding: 25px 15px;
+    min-height: 190px;
+    transition: .3s;
+}
+
+.opcion-perfil:hover {
+    background: #782d43;
+    transform: translateY(-5px);
+}
+
+.opcion-perfil i {
+    font-size: 35px;
+    color: #d66b85;
+}
+
+.opcion-perfil h4 {
+    margin-top: 15px;
+}
+
+.opcion-perfil p {
+    margin-bottom: 0;
+    color: #ccc;
+}
